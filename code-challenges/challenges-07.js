@@ -92,11 +92,13 @@ const objLat = (obj) => {
 const cvFormatter = (arr) => {
     let array = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr.firstName == null || arr.lastName == null) {
-            array.slice(arr.firstName, arr.lastName);
-            array.push(arr[i].firstName + " " + arr[i].lastName);
+        if (arr[i].yearsOfExperience > 1) {
+            let app = {
+                fullName: (arr[i].lastName !== null) ? `${arr[i].firstName} ${arr[i].lastName}` : `${arr[i].firstName}`,
+                tech: arr[i].tech
+            }
+            array.push(app)
         }
-        array.push(arr[i].tech)
     }
     return array;
 };
