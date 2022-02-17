@@ -110,14 +110,18 @@ const roundDecimals = (arr) => {
 
 const employeesBonus = (arr) => {
     let array = [];
-    let emp
-    arr.forEach(ele => emp = {
-        name: ele.name,
-        section: ele.section,
-        workHours: ele.workHours,
-        salary: (ele.workHours > 8) ? (ele.sal).split('$') + 10 : ele.salary + "5",
+    arr.forEach(ele => {
+        let sal = (ele.workHours > 8) ? (Number(ele.salary.replace(/\$/g, '')) + 100).toString() + "$" :
+            (Number(ele.salary.replace(/\$/g, '')) + 50).toString() + "$";
+        let emp = {
+            name: ele.name,
+            section: ele.section,
+            workHours: ele.workHours,
+            salary: sal,
+        }
+        array.push(emp);
     })
-    array.push(emp);
+    console.log(array)
     return array;
 }
 // -------------------------------------------------------------------------------------------------------
