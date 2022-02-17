@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Important Note:
 // Kindly use forEach loop instead of for in all of your solutions
@@ -11,46 +11,45 @@
 // Required:
 
 //  Write a function that takes an array of numbers and increase the values by 10
-//  
+//
 //  Input:
 //  [20, 54, 89, 41]
 //  Output:
 //  [30, 64, 99, 51]
-//  
+//
 
 const arrInc = (arr) => {
-    let result = [];
-    arr.forEach(arr => result.push(arr + 10))
-    return result;
-}
+  let result = [];
+  arr.forEach((arr) => result.push(arr + 10));
+  return result;
+};
 // -------------------------------------------------------------------------------------------------------
-
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02:
 // Required:
 
-//  Write a function that takes an array of decimals and round every value to the closest value 
-//  
+//  Write a function that takes an array of decimals and round every value to the closest value
+//
 //  Input:
-//  [5.4, 5.5 ,6.7, 6.8] 
+//  [5.4, 5.5 ,6.7, 6.8]
 //  Output:
 //  [5, 6, 7, 7]
-// 
+//
 const roundDecimals = (arr) => {
-    let array = [];
-    arr.forEach(arr => array.push(Math.round(arr)))
-    return array;
-}
+  let array = [];
+  arr.forEach((arr) => array.push(Math.round(arr)));
+  return array;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 03:
 // Required:
-// 
+//
 // An owner of a factory wants to give a 100$ bonus for production department employees who worked *More than* 8 hours
-// and 50$ for those who worked less, given their data increase their salary and return the data back again 
-//  
+// and 50$ for those who worked less, given their data increase their salary and return the data back again
+//
 // Input:
 // let data = [
 //     {
@@ -78,7 +77,7 @@ const roundDecimals = (arr) => {
 //         salary: "3200$"
 //     }
 // ]
-// 
+//
 // Output:
 // [
 //     {
@@ -109,21 +108,24 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
-    let array = [];
-    arr.forEach(ele => {
-        let sal = (ele.workHours > 8) ? (Number(ele.salary.replace(/\$/g, '')) + 100).toString() + "$" :
-            (Number(ele.salary.replace(/\$/g, '')) + 50).toString() + "$";
-        let emp = {
-            name: ele.name,
-            section: ele.section,
-            workHours: ele.workHours,
-            salary: sal,
-        }
-        array.push(emp);
-    })
-    console.log(array)
-    return array;
-}
+  let array = [];
+  arr.forEach((ele) => {
+    let sal =
+      ele.workHours > 8
+        ? (Number(ele.salary.replace(/\$/g, "")) + 100).toString() + "$"
+        : (Number(ele.salary.replace(/\$/g, "")) + 50).toString() + "$";
+    let emp = {
+      name: ele.name,
+      section: ele.section,
+      workHours: ele.workHours,
+      salary: sal,
+    };
+
+    array.push(emp);
+  });
+  console.log(array);
+  return array;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -133,17 +135,17 @@ const employeesBonus = (arr) => {
 // Harry wants to buy a new mouse and keyboard for his new setup
 // He wants to choose one mouse and one keyboard from the list of prices and take the most expensive combination
 // but his budget is limited, help him by finding the most expensive *price* for a combination to buy with his budget
-// 
+//
 // Input:
 // budget = 200$
 // mouseArray = [35, 15, 75, 180, 150, 50]
 // keyBoardArray = [5, 150, 35, 120, 75, 50, 100]
-// 
+//
 // Output: 200
 
 const mostExpensive = (budget, mouseArray, keyBoardArray) => {
-    // write your code here
-}
+  // write your code here
+};
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { arrInc, roundDecimals, employeesBonus, mostExpensive };
