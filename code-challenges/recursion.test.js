@@ -1,7 +1,11 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy) {
+    if (dividedBy <=0) {
+        return 0
+    } else {
     return number * dividedBy ** -1
+}
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
@@ -62,7 +66,7 @@ function permutations(n, k) {
 describe("Test division", () => {
     test("Return the division result", () => {
         expect(division(10, 2)).toStrictEqual(5);
-        expect(division(10, 0)).toStrictEqual(2);
+        expect(division(10, 0)).toStrictEqual(0);
         expect(division(0, 10)).toStrictEqual(0);
 
     })
