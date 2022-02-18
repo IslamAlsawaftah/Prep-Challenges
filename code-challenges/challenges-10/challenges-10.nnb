@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function birthdayCakeCandles(candles) {\n    let n; // size of candles\n    for(let i=0;i<candles.length;i++) {\n        if (candles[i]>candles[i+1]) {\n            n = candles[i];\n        }\n    }\nreturn n\n}"
+                "function birthdayCakeCandles(candles) {\n    var max= Math.max.apply(Array, candles);\n      return candles.filter(function(candle){\n      return  candle===max}).length;\n  }"
             ],
             "outputs": []
         },
