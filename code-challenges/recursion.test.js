@@ -1,13 +1,14 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy) {
-    if (dividedBy <=0) {
-        return 0
-    } else {
-    return number * dividedBy ** -1
+    if (number - dividedBy < 0)
+        return 0;
+    else if (number - dividedBy == 0)
+        return 1;
+    else {
+        return division(number - dividedBy, dividedBy) + 1;
+    }
 }
-}
-
 /* Write a function that implement Math.pow(x,n) but using recursion
 Example:
 pow(2,4) = 16
