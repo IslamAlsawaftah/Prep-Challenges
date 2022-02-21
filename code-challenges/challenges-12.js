@@ -77,7 +77,7 @@ const cvsFiltration = (arr) => {
     const result = arr.filter(cond => {
         if (cond.yearsOfExperience > 4 && cond.tech == "JS") {
             let obj = {
-                fullName: `${cond.firstName} ${cond.LastName}`,
+                fullName: (cond.lastName !== null) ? `${cond.firstName} ${cond.LastName}` : `${cond.firstName}`,
                 tech: cond.tech
             }
             array.push(obj)
