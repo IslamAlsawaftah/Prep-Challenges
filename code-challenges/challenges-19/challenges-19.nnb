@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function appendAndDelete(s, t, k) {\n    let sIndex=0;\n    let tIndex=0;\n    // find common charachter between s and t\n    while(sIndex<s.length && tIndex<t.length)     {\n        if(s.charAt(sIndex) == t.charAt(tIndex)) {\n            sIndex++;\n            tIndex++;\n        }else {\n            break;\n        }\n    }\n    let minOpNedded=0;\n    // based on the number of common charachter between s and t\n    minOpNedded = s.length - sIndex + t.length - tIndex;\n    // there is no way to compare s with t\n    if(k<minOpNedded ) {\n        return \"No\"\n    }\n    else if (k>=s.length + t.length) {\n        return \"Yes\"\n    }\n    else if((k- minOpNedded) %2==0){\n        return \"Yes\";\n    } else {\n        return \"No\"\n    }\n    }"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
